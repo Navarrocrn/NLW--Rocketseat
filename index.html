@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocketseat NLW</title>
+    <link rel="stylesheet" href="css\style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wdth,wght@75..100,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.png" alt="Logo Esports NLW" />
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <h2>Assistente de Meta</h2>
+          <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
+          <form action="" id="form">
+            <!-- <label for="input" class="text">Informe a API KEY do Gemini</label>
+            <input
+              type="password"
+              placeholder="Informe a API KEY do Gemini"
+              required
+            /> -->
+            <div class="coolinput">
+              <label for="input" class="text"
+                >Informe a API KEY do Gemini</label
+              >
+              <input type="password" id="apiKey" name="input" class="input" />
+            </div>
+
+            <select id="gameSelect" name="">
+              <option value="">Selecione um jogo</option>
+              <option value="valorant">Valorant</option>
+              <option value="cod">Call of Duty</option>
+              <option value="csgo">CS:GO</option>
+              <option value="itTakesTwo">It Takes Two</option>
+              <option value="splitFiction">Split Fiction</option>
+              <option value="eldenRing">Elden Ring</option>
+              <option value="lol">League of Legends</option>
+            </select>
+
+            <div class="coolinput">
+              <label for="input" class="text"
+                >Faça uma pergunta sobre o jogo</label
+              >
+              <input type="text" id="questionInput" />
+            </div>
+
+            <button id="askButton" class="btn-form">
+              <span class="text">Perguntar</span>
+            </button>
+          </form>
+          <div id="aiResponse" class="hidden">
+            <div class="response-content"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
