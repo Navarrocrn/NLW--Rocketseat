@@ -18,45 +18,85 @@
     </header>
     <main>
       <section>
+        <!-- Container geral que agrupa o conteúdo de texto, formulário e resposta -->
         <div class="container">
-          <h2>Assistente de Meta</h2>
-          <p>Pergunte sobre estratégias, build e dicas para seus jogos!</p>
-          <form action="" id="form">
-            <!-- <label for="input" class="text">Informe a API KEY do Gemini</label>
-            <input
-              type="password"
-              placeholder="Informe a API KEY do Gemini"
-              required
-            /> -->
-            <div class="coolinput">
-              <label for="input" class="text"
-                >Informe a API KEY do Gemini</label
-              >
-              <input type="password" id="apiKey" name="input" class="input" />
-            </div>
+          <!-- Bloco com o título e descrição do assistente -->
+          <div class="container-text">
+            <h2>GameHelper AI</h2>
+            <p>
+              Tire suas dúvidas e melhore sua gameplay com dicas personalizadas!
+            </p>
+          </div>
 
-            <select id="gameSelect" name="">
-              <option value="">Selecione um jogo</option>
-              <option value="valorant">Valorant</option>
-              <option value="cod">Call of Duty</option>
-              <option value="csgo">CS:GO</option>
-              <option value="itTakesTwo">It Takes Two</option>
-              <option value="splitFiction">Split Fiction</option>
-              <option value="eldenRing">Elden Ring</option>
-              <option value="lol">League of Legends</option>
-            </select>
+          <!-- Bloco que contém todo o formulário de interação -->
+          <div class="container-form">
+            <form action="" id="form">
+              <!-- Campo de entrada para a API Key do Gemini -->
+              <div class="coolinput-tooltip">
+                <div class="coolinput">
+                  <label for="input" class="text"
+                    >Informe a API KEY do Gemini</label
+                  >
+                  <input
+                    type="password"
+                    id="apiKey"
+                    name="input"
+                    class="input"
+                  />
+                </div>
+                <!-- Botão para ajudar o usuário a entender como obter a API Key -->
+                <div class="form-group">
+                  <button
+                    type="button"
+                    id="apiKeyHelpButton"
+                    class="help-button icon-only"
+                  >
+                    <img
+                      src="assets\question-solid.svg"
+                      alt="Como gerar API Key?"
+                      class="help-icon"
+                    />
+                  </button>
+                </div>
+              </div>
 
-            <div class="coolinput">
-              <label for="input" class="text"
-                >Faça uma pergunta sobre o jogo</label
-              >
-              <input type="text" id="questionInput" />
-            </div>
+              <!-- Container do tooltip (dica de ajuda), inicialmente oculto -->
+              <div id="apiKeyTooltip" class="tooltip-container hidden">
+                <div class="tooltip-content"></div>
+              </div>
 
-            <button id="askButton" class="btn-form">
-              <span class="text">Perguntar</span>
-            </button>
-          </form>
+              <!-- Bloco de seleção de jogo, com opções disponíveis -->
+              <div class="container-select">
+                <div class="select-wrapper">
+                  <select id="gameSelect" name="select" class="select">
+                    <option value="">Selecione um jogo</option>
+                    <option value="valorant">Valorant</option>
+                    <option value="cod">Call of Duty</option>
+                    <option value="csgo">CS:GO</option>
+                    <option value="itTakesTwo">It Takes Two</option>
+                    <option value="splitFiction">Split Fiction</option>
+                    <option value="eldenRing">Elden Ring</option>
+                    <option value="lol">League of Legends</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Campo para o usuário digitar uma pergunta sobre o jogo -->
+              <div class="coolinput">
+                <label for="input" class="text"
+                  >Faça uma pergunta sobre o jogo</label
+                >
+                <input type="text" id="questionInput" class="input" />
+              </div>
+
+              <!-- Botão para enviar a pergunta -->
+              <button id="askButton" class="btn-form">
+                <span class="text">Perguntar</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Área onde será exibida a resposta da IA, inicialmente oculta -->
           <div id="aiResponse" class="hidden">
             <div class="response-content"></div>
           </div>
@@ -65,6 +105,7 @@
     </main>
 
     <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./tooltip.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

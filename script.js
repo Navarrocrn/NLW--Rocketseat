@@ -348,18 +348,22 @@ const sendForm = async (event) => {
 
   // console.log({ apiKey, game, question });
 
-  if (apiKey == "" || game == "" || question == "") {
-    alert("Porfavor preencha todos os campos");
-    return;
-  }
+  // if (apiKey == "" || game == "" || question == "") {
+  //   alert("Porfavor preencha todos os campos");
+  //   return;
+  // }
 
   askButton.disabled = true;
   askButton.textContent = "Aguarde...";
   askButton.classList.add("loading");
 
   try {
-    //Perguntar para IA
+    if (apiKey === "" || game === "" || question === "") {
+      throw new Error("Por favor, preencha todos os campos");
+    }
+
     const text = await perguntarAI(question, game, apiKey);
+
     aiResponse.querySelector(".response-content").innerHTML =
       markdownToHTML(text);
     aiResponse.classList.remove("hidden");
@@ -372,6 +376,12 @@ const sendForm = async (event) => {
         ❌ <strong>Chave da API inválida:</strong> Verifique se você colou a chave correta da Gemini API.
       </div>
     `;
+    } else if (error.message.includes("preencha todos os campos")) {
+      errorMessage = `
+      <div class="bg-yellow-100 text-yellow-800 border border-yellow-400 p-4 rounded-md font-medium">
+        ⚠️ <strong>Atenção:</strong> ${error.message}
+      </div>
+    `;
     } else {
       errorMessage = `
       <div class="bg-red-100 text-red-800 border border-red-400 p-4 rounded-md font-medium">
@@ -382,6 +392,7 @@ const sendForm = async (event) => {
 
     aiResponse.querySelector(".response-content").innerHTML = errorMessage;
     aiResponse.classList.remove("hidden");
+
     console.error("Erro:", error);
   } finally {
     askButton.disabled = false;
