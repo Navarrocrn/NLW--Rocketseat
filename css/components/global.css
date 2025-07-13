@@ -1,0 +1,96 @@
+body * {
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("/assets/Nature.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Ou use: 100% 100% para esticar */
+  background-position: top center;
+  background-attachment: fixed;
+
+  background-color: #121214;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/nature.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: -1;
+  filter: blur(4px);
+  opacity: 0.7;
+}
+body *,
+:root {
+  font-family: "Inter";
+  line-height: 160%;
+}
+header {
+  text-align: center;
+  padding-top: 2rem;
+}
+header img {
+  width: 15rem;
+}
+main {
+  max-width: 36rem;
+  width: 90%;
+  margin: 1rem auto;
+}
+section {
+  /* background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb); */
+  border-radius: 0.625rem;
+  background: #1c00335c;
+  backdrop-filter: blur(1px);
+}
+
+/* animations */
+main section {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation-name: appear;
+  animation-duration: 700ms;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+  width: 3px; /* largura vertical */
+  height: 3px; /* altura horizontal */
+}
+
+/* Trilha (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* cor de fundo */
+  border-radius: 10px;
+}
+
+/* Alça (a parte que se move) */
+::-webkit-scrollbar-thumb {
+  background: #b777f3; /* cor da alça */
+  border-radius: 10px; /* cantos arredondados */
+}
+
+/* Alça ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: #1c0033;
+}
