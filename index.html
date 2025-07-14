@@ -37,28 +37,31 @@
                   <label for="input" class="text"
                     >Informe a API KEY do Gemini</label
                   >
-                  <input
-                    type="password"
-                    id="apiKey"
-                    name="input"
-                    class="input"
-                  />
+                  <div class="coolinput-apikey">
+                    <input
+                      type="password"
+                      id="apiKey"
+                      name="input"
+                      class="input"
+                    />
+                    <div class="form-group">
+                      <button
+                        type="button"
+                        id="apiKeyHelpButton"
+                        class="help-button icon-only"
+                      >
+                        <img
+                          src="assets\question-solid.svg"
+                          alt="Como gerar API Key?"
+                          class="help-icon"
+                        />
+                      </button>
+                    </div>
+                  </div>
                 </div>
                 <!-- Botão para ajudar o usuário a entender como obter a API Key -->
-                <div class="form-group">
-                  <button
-                    type="button"
-                    id="apiKeyHelpButton"
-                    class="help-button icon-only"
-                  >
-                    <img
-                      src="assets\question-solid.svg"
-                      alt="Como gerar API Key?"
-                      class="help-icon"
-                    />
-                  </button>
+
                 </div>
-              </div>
 
               <!-- Container do tooltip (dica de ajuda), inicialmente oculto -->
               <div id="apiKeyTooltip" class="tooltip-container hidden">
@@ -104,6 +107,8 @@
             <div class="response-content-error"></div>
           </div>
         </div>
+       </div>
+
       </section>
     </main>
 

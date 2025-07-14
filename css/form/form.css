@@ -10,11 +10,9 @@ form {
 }
 .container {
   padding: 1rem;
-  background: rgb(255 255 255 / 11%);
+  background: rgb(255 255 255 / 1%);
   border-radius: 0.625rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.88);
-  /* backdrop-filter: blur(20px); */
+  box-shadow: rgb(197 117 254 / 54%) 0px 0px 15px;
   backdrop-filter: blur(20px);
   transition: all 0.3s ease-in-out;
 }
@@ -43,24 +41,56 @@ form {
   flex-direction: column;
   width: 100%;
   position: static;
-  /* flex: 1; */
+  margin-bottom: 0.6rem;
   max-width: 100%;
 }
-
-.coolinput label.text {
+.coolinput-apikey {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 0.3rem;
+  background: #ffffff14;
   font-size: 0.8rem;
-  color: #ffffff;
+  /* color: #ffff; */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.coolinput-apikey input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+.coolinput label.text {
+  font-size: 0.9rem;
+  color: #c7c7c7;
   font-weight: 500;
   letter-spacing: 0.3px;
   position: relative;
   margin: 0px;
-  padding: 2px 4px;
+  padding: 1px 9px;
+  line-height: 1.5;
   background: #af40ff00;
   width: fit-content;
 }
+.coolinput label.text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #c084fc;
+  width: 6px;
+  height: 15px; /* altura do quadrado */
+  border-radius: 0.1rem;
+}
 
 .container-select {
-  border: 1px #f7edff30 solid;
   border-radius: 0.3rem;
   font-size: 14px;
   width: 100%;
@@ -72,20 +102,18 @@ form {
   padding: 12px 16px;
   width: 100%;
   border-radius: 0.3rem;
-  background: #1c003324;
+  background: #ffffff14;
   color: #fff;
   border: none;
   cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg fill='white' viewBox='0 0 24 24' width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
 }
 .select option {
   background-color: #1c0033; /* Cor de fundo */
 }
-
-.coolinput input[type="password"].input,
+/* 
+.coolinput input[type="password"].input {
+  padding: 11px 10px;
+} */
 .coolinput input[type="text"].input {
   appearance: none;
   -webkit-appearance: none;
@@ -93,15 +121,17 @@ form {
   border: none;
   padding: 11px 10px;
   font-size: 0.75rem;
-  border: 1px #f7edff30 solid;
   border-radius: 0.3rem;
-  background: #1c003324;
+  background: #ffffff14;
   font-size: 0.8rem;
   color: #ffff;
 }
-
+.coolinput-apikey:focus-within {
+  outline: none;
+  border-bottom: 2px solid #b95fff;
+  border-radius: 0px;
+}
 .coolinput input[type="text"].input:focus,
-.coolinput input[type="password"].input:focus,
 .container-select:focus {
   outline: none;
   border-bottom: 2px solid #b95fff;
