@@ -24,6 +24,7 @@ form {
 .container h2 {
   font-size: 1.5rem;
   line-height: 1.6rem;
+  margin-bottom: 0.5rem;
   font-weight: bold;
   background: linear-gradient(2deg, #ffffff 8%, #b777f3 62%, #640ca3 100%);
   -webkit-background-clip: text;
