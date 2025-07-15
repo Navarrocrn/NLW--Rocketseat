@@ -9,16 +9,10 @@ const markdownToHTML = (text) => {
   const converter = new showdown.Converter();
   return converter.makeHtml(text);
 };
-// Chave da API:
-// AIzaSyAfcdiaZJqP013_l9ooxudK6ALBXnQp7LQ
 const perguntarAI = async (question, game, apiKey) => {
   const model = "gemini-2.5-flash";
   const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-
   let pergunta = ""; // Esta variável armazenará o prompt final para o LLM
-
-  // console.log(pergunta);
-
   switch (game) {
     case "valorant":
       pergunta = `# Assistente de Games: Seu Guia Definitivo para Valorant
@@ -297,7 +291,6 @@ A build mais atual para Rengar Jungle foca em dano e letalidade:
       pergunta = `Desculpe, não sou especializado neste jogo no momento.`;
       break;
   }
-
   const contents = [
     {
       role: "user",
@@ -345,13 +338,6 @@ const sendForm = async (event) => {
   const apiKey = apiKeyInput.value;
   const game = gameSelect.value;
   const question = questionInput.value;
-
-  // console.log({ apiKey, game, question });
-
-  // if (apiKey == "" || game == "" || question == "") {
-  //   alert("Porfavor preencha todos os campos");
-  //   return;
-  // }
 
   askButton.disabled = true;
   askButton.textContent = "Aguarde...";

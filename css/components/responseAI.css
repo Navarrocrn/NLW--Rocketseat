@@ -1,22 +1,38 @@
 #aiResponse {
-  color: white;
   background-color: #280d3d73;
   border-radius: 0.5rem;
   padding: 1.6rem 1rem;
   text-align: justify;
 }
-#aiResponse ul {
-  padding-left: 1.5rem;
-  line-height: 1rem;
-  opacity: 0.7;
+
+/* Cor global para tudo dentro */
+#aiResponse .response-content {
+  color: #ffffff !important;
 }
 
+/* Parágrafos */
 #aiResponse p {
-  color: white;
+  margin-bottom: 1rem;
+  color: #ffffff !important;
 }
+
+/* Listas */
+#aiResponse ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  list-style-type: disc;
+}
+
+/* Itens da lista */
 #aiResponse li {
-  color: #ffff;
+  margin-bottom: 0.8rem;
+  color: #ffffff !important;
+  line-height: 1.4rem;
 }
-#aiResponse li strong {
-  color: #d59fff;
+
+/* Destaques em roxo */
+#aiResponse li strong,
+#aiResponse p strong {
+  color: #d59fff !important;
 }

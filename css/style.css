@@ -1,8 +1,7 @@
 @import "./components/global.css";
 @import "./components/responseAI.css";
+@import "./components/redes.css";
 
 @import "./form/button.css";
 @import "./form/form.css";
 @import "./form/tooltip.css";
-
-/* @import "./components/select.css"; */

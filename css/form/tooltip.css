@@ -1,22 +1,19 @@
 .help-button {
-  background-color: #555; /* Cor de fundo mais escura para contraste */
+  background-color: #555;
   color: white;
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9em;
-  margin-left: 10px; /* Espaço entre o input e o botão */
+  margin-left: 10px;
   transition: background-color 0.3s ease;
 }
-
 .help-button:hover {
   background-color: #777;
 }
-
-/* Estilo para o contêiner do tooltip */
 .tooltip-container {
-  position: fixed; /* Fixa na tela */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,54 +21,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
-  z-index: 1000; /* Garante que ele fique acima de tudo */
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
 }
-
 /* Esconde o tooltip por padrão */
 .tooltip-container.hidden {
   display: none;
 }
-
 /* Estilo para o conteúdo do tooltip */
 .tooltip-content {
-  background: #2a2a2a; /* Mesma cor de fundo dos modais/elementos */
-  color: #f0f0f0;
+  background: #11041b;
+  color: #dfdfdf;
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  max-width: 600px; /* Largura máxima para o texto */
-  width: 90%; /* Ocupa 90% da largura em telas menores */
-  position: relative; /* Para o z-index */
-  z-index: 1001; /* Acima do overlay */
-  text-align: left; /* Alinha o texto à esquerda */
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  z-index: 1001;
+  text-align: left;
   line-height: 1.6;
-  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito longo */
-  max-height: 80vh; /* Altura máxima */
+  overflow-y: auto;
+  max-height: 80vh;
 }
-
 .tooltip-content h3 {
-  color: #4caf50; /* Cor para o título interno do tooltip */
+  color: #4caf50;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3em;
 }
-
 .tooltip-content ol {
-  /* Estilo para listas ordenadas dentro do tooltip */
   margin-left: 20px;
   padding-left: 0;
 }
-
 .tooltip-content li {
   margin-bottom: 8px;
 }
-
 .tooltip-content strong {
-  color: #b777f3; /* Destaque para palavras importantes */
+  color: #b777f3;
 }
-
-/* Estilo para o botão de fechar dentro do tooltip (opcional, mas recomendado) */
 .tooltip-content .close-button-tooltip {
   position: absolute;
   top: 10px;
@@ -81,79 +69,59 @@
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
 .tooltip-content .close-button-tooltip:hover {
   color: #f0f0f0;
 }
-
 .tooltip-content h3.tooltip-title {
-  /* O h3 do seu tooltip */
-  color: #fff; /* Cor para o título interno do tooltip */
+  color: #fff;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3em;
 }
-
 .tooltip-content p.tooltip-paragraph {
-  /* Parágrafos dentro do tooltip */
   font-size: 1em;
   margin-bottom: 10px;
-  color: #f0f0f0; /* Cor do texto padrão */
+  color: #f0f0f0;
 }
-
 .tooltip-content ol.tooltip-list {
-  /* Listas ordenadas */
   margin-left: 20px;
   padding-left: 0;
 }
-
 .tooltip-content li.tooltip-list-item {
-  /* Itens da lista */
   margin-bottom: 8px;
 }
-
 .tooltip-content strong.tooltip-strong {
-  /* Texto em negrito */
-  color: #b777f3; /* Cor de destaque para palavras importantes */
+  color: #b777f3;
   font-weight: bold;
 }
-
 .tooltip-content a.tooltip-link {
-  /* Links dentro do tooltip */
-  color: #61dafb; /* Cor que você usou inline, agora em CSS */
-  text-decoration: none; /* Remove sublinhado padrão */
+  color: #61dafb;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
-
 .tooltip-content a.tooltip-link:hover {
-  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  text-decoration: underline;
 }
-
 .tooltip-content p.tooltip-important {
-  /* Parágrafo "Importante" */
   margin-top: 20px;
   padding: 10px;
   border: 1px solid red;
   border-radius: 5px;
-  background-color: #ffffff; /* Fundo sutil */
-  color: #2d0058; /* Cor do texto para importante */
+  background-color: #c1c1c100;
+  color: #f0f0f0;
 }
-/* Estilo para o botão de ajuda */
 .help-button {
-  /* Remova as propriedades de background-color, padding e margin-left que estavam aqui antes */
-  /* Elas serão sobrescritas ou removidas pela classe icon-only */
   border: none;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.3s ease, opacity 0.3s ease; /* Adicionei transição para opacidade */
-  background: none; /* Garante que não tenha background padrão */
-  padding: 0; /* Remove padding */
-  margin-left: 5px; /* Ajuste a margem se necessário */
-  display: inline-flex; /* Para alinhar melhor a imagem dentro do botão */
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+  background: none;
+  padding: 0;
+  margin-left: 5px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }
-
 /* Estilo para o botão quando ele é apenas um ícone */
 .help-button.icon-only {
   width: 31px;
@@ -165,17 +133,13 @@
   align-items: center;
   justify-content: center;
 }
-
 /* Estilo para a imagem do ícone dentro do botão */
 .help-button .help-icon {
-  width: 100%; /* A imagem preenche o botão */
+  width: 100%;
   height: 100%;
-  object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
-  opacity: 0.8; /* Um pouco transparente */
+  object-fit: contain;
+  opacity: 0.8;
 }
-
 .help-button.icon-only:hover .help-icon {
-  opacity: 1; /* Fica totalmente visível ao passar o mouse */
-  /* Se você quiser mudar a cor ao hover, pode fazer assim: */
-  /* filter: invert(70%) sepia(100%) saturate(700%) hue-rotate(80deg) brightness(100%) contrast(100%); */ /* Exemplo: muda para verde */
+  opacity: 1;
 }

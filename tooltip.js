@@ -1,14 +1,10 @@
-// tooltip.js
-
-// Referências para o botão de ajuda e o tooltip
 const apiKeyHelpButton = document.getElementById("apiKeyHelpButton");
 const apiKeyTooltip = document.getElementById("apiKeyTooltip");
 const tooltipContentDiv = apiKeyTooltip.querySelector(".tooltip-content");
-const closeButtonTooltip = document.createElement("span"); // Criamos um botão de fechar para o tooltip
+const closeButtonTooltip = document.createElement("span"); // botão de fechar para o tooltip
 closeButtonTooltip.classList.add("close-button-tooltip");
 closeButtonTooltip.innerHTML = "&times;";
 
-// O conteúdo explicativo para o tooltip, AGORA COM CLASSES CSS
 const apiKeyHelpContent = `
     <h3 class="tooltip-title">Como Conseguir Sua Chave API do Gemini</h3>
     <p class="tooltip-paragraph">Para usar este assistente de games, você precisará de uma <strong class="tooltip-strong">chave API (API Key)</strong> do Google Gemini. O processo é simples e rápido:</p>

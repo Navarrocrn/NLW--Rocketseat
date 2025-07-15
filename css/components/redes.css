@@ -1,0 +1,27 @@
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 999;
+  flex-direction: row;
+}
+
+.social-icons a {
+  background-color: #3e006b;
+  border-radius: 0.3rem;
+}
+
+.social-icons a:hover {
+  transform: scale(0.9);
+  background-color: #9d4ad7;
+}
+
+.social-icons img {
+  width: 3rem;
+  padding: 10px;
+  border-radius: 0.3rem;
+  filter: brightness(0) invert(1);
+  display: flex;
+}
