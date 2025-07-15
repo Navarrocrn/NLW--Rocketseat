@@ -9,10 +9,10 @@ html {
 }
 body {
   background-image: url("https://navarrocrn.github.io/NLW--Rocketseat/assets/space.svg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   background-position: top center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-color: #121214;
   color: #fff;
   padding-bottom: 1rem;

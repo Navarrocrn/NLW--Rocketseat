@@ -30,8 +30,9 @@
 }
 /* Estilo para o conteúdo do tooltip */
 .tooltip-content {
-  background: #11041b;
-  color: #dfdfdf;
+  background: #f9f0ff;
+  font-weight: 400;
+  color: #242325;
   padding: 25px 30px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -42,6 +43,7 @@
   text-align: left;
   line-height: 1.6;
   overflow-y: auto;
+  overflow-wrap: break-word;
   max-height: 80vh;
 }
 .tooltip-content h3 {
@@ -60,20 +62,24 @@
 .tooltip-content strong {
   color: #b777f3;
 }
+.tooltip-content strong.tooltip-strong-conteudo {
+  color: #3e006b;
+}
 .tooltip-content .close-button-tooltip {
   position: absolute;
   top: 10px;
   right: 20px;
   font-size: 30px;
-  color: #b5b5b5;
+  font-weight: bold;
+  color: #6a0dad;
   cursor: pointer;
   transition: color 0.3s ease;
 }
 .tooltip-content .close-button-tooltip:hover {
-  color: #f0f0f0;
+  color: #000000;
 }
 .tooltip-content h3.tooltip-title {
-  color: #fff;
+  color: #000000;
   margin-top: 0;
   margin-bottom: 15px;
   font-size: 1.3em;
@@ -81,7 +87,7 @@
 .tooltip-content p.tooltip-paragraph {
   font-size: 1em;
   margin-bottom: 10px;
-  color: #f0f0f0;
+  color: #000000;
 }
 .tooltip-content ol.tooltip-list {
   margin-left: 20px;
@@ -95,7 +101,8 @@
   font-weight: bold;
 }
 .tooltip-content a.tooltip-link {
-  color: #61dafb;
+  color: #0079f9;
+  font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -105,10 +112,9 @@
 .tooltip-content p.tooltip-important {
   margin-top: 20px;
   padding: 10px;
-  border: 1px solid red;
   border-radius: 5px;
-  background-color: #c1c1c100;
-  color: #f0f0f0;
+  background-color: #e0b3ff59;
+  color: #000000;
 }
 .help-button {
   border: none;

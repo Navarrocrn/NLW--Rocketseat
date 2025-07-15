@@ -28,6 +28,9 @@ form {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.container p {
+  font-size: 0.9rem;
+}
 
 .coolinput-tooltip {
   width: 100%;

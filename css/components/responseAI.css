@@ -2,7 +2,8 @@
   background-color: #280d3d73;
   border-radius: 0.5rem;
   padding: 1.6rem 1rem;
-  text-align: justify;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 
 /* Cor global para tudo dentro */
