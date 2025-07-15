@@ -48,7 +48,11 @@ O **Assistente de Games** é uma interface web que permite ao usuário inserir u
    ```
 
 2. Acesse a pasta do projeto:
+
+   ```bash
    cd NLW--Rocketseat
+
+   ```
 
 3. Abra o arquivo index.html em um navegador:
    Se estiver usando o VS Code, você pode usar a extensão Live Server
@@ -58,6 +62,8 @@ O **Assistente de Games** é uma interface web que permite ao usuário inserir u
 
 5. Escolha um jogo, digite sua dúvida e clique em "Perguntar" 🎮
 
+---
+
 ## 🔐 Requisitos
 
 Você precisa de uma API Key válida do Gemini:
@@ -66,6 +72,8 @@ Crie sua chave em: https://aistudio.google.com/app/apikey
 
 Copie e cole no campo indicado na interface
 
+---
+
 ## 📌 Observações
 
 - Este projeto é educacional e não armazena nenhuma chave de API.
@@ -73,6 +81,8 @@ Copie e cole no campo indicado na interface
 - A comunicação com a IA é feita diretamente no navegador.
 
 - Código limpo e comentado para aprendizado.
+
+---
 
 ## 🧑‍💻 Autoria
 

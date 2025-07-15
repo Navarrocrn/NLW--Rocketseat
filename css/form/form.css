@@ -21,7 +21,7 @@ form {
   text-align: center;
 }
 
-.container h2 {
+.container-text h2 {
   font-size: 1.5rem;
   line-height: 1.6rem;
   margin-bottom: 0.5rem;
@@ -30,7 +30,7 @@ form {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.container p {
+.container-text p {
   font-size: 0.9rem;
 }
 
